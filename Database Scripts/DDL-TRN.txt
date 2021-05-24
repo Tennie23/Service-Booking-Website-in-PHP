@@ -1,0 +1,72 @@
+/*  Dropping table statements  */
+		
+DROP TABLE users;
+DROP TABLE cart;
+DROP TABLE caterory;
+DROP TABLE items;
+
+
+/*  Creating ALL Booking DATABASE tables  */
+
+/* Creating items table */
+CREATE TABLE items
+(
+	id            INT auto_increment, 
+	item_name     varchar(30),
+	category_idd  int(11),
+        item_price    int(20), 
+	CONSTRAINT items_PK_invalid PRIMARY KEY (id)
+);
+
+
+
+/* Creating cart table */
+
+CREATE TABLE cart
+(
+	cart_id      INT auto_increment,
+	items        varchar(60),
+	dte          DATE,
+	CONSTRAINT cart_PK_invalid PRIMARY KEY (cart_id)
+);
+
+
+/* Creating clients table */
+CREATE TABLE users
+(
+	user_id       INT auto_increment,
+	user_firts    varchar(60),
+	user_last     varchar(60),
+	user_email    varchar(60),
+	user_phone    varchar(25),
+	status_code   char(1),
+        user_type     char(1),
+	CONSTRAINT users_PK_invalid PRIMARY KEY (user_id)
+);
+ALTER TABLE users AUTO_INCREMENT=1000;
+
+
+/* Creating category table */
+CREATE TABLE category
+(
+	category_idd  INT auto_increment,
+	category_name varchar(50),
+	CONSTRAINT category_PK_invalid PRIMARY KEY (category_idd)
+ 
+
+/*  Show ALL Booking DATABASE tables  */
+SHOW TABLES;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
